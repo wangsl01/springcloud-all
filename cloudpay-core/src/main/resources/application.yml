@@ -1,0 +1,31 @@
+debug: true
+
+
+# 当前应用名称
+spring:
+  application:
+    name: cloudpay-core
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    sender:
+      type: kafka  #配置zipkin发送类型为kafka
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092 #集群的情况直接用“,”分割
+  sleuth:
+    sampler:
+      probability: 1
+
+
+server:
+  port: 9090
+
+
+# 开放 所有Web 管理 Endpoints
+management:
+  endpoints:
+# 激活 shutdown Endpoint
+    shutdown:
+      enabled: true
+    web:
+      exposure:
+        include: \*
