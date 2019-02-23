@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
@@ -23,16 +24,17 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
+@EnableZuulProxy
 @Controller
 public class AppWeb
 {
-    @Autowired
-    private DiscoveryClient discoveryClient;
-
-    @Autowired
-    private RestTemplate restTemplate;
-    @Autowired
-    private RestTemplate loadBalancedRestTemplate;
+//    @Autowired
+//    private DiscoveryClient discoveryClient;
+//
+//    @Autowired
+//    private RestTemplate restTemplate;
+//    @Autowired
+//    private RestTemplate loadBalancedRestTemplate;
 
     @Autowired
     private HelloService helloService;
