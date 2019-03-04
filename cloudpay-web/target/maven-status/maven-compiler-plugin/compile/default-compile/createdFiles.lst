@@ -1,0 +1,3 @@
+cloud\pay\web\controller\MyZuulController.class
+cloud\pay\AppWeb.class
+cloud\pay\web\service\HelloService.class
