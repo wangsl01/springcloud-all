@@ -1,21 +1,28 @@
 spring:
-#  sleuth:
-#    sampler:
-#      #percentage: 1
-#      probability: 1
+  sleuth:
+    sampler:
+      #percentage: 1
+      probability: 1
   application:
     name: cloudpay-web
-#  zipkin:
-#    base-url: http://127.0.0.1:9411
-#    sender:
-#      type: kafka  #配置zipkin发送类型为kafka
+  zipkin:
+    base-url: http://127.0.0.1:9411
+    sender:
+      type: kafka  #配置zipkin发送类型为kafka
 ##    kafka:
 ##     topic: zipkin #kafka主题，不配置时默认使用zipkin
 ##    service:
 ##    设置服务名,不设置默认使用spring.application.name
 ##     name: gateway
-#  kafka:
-#    bootstrap-servers: 127.0.0.1:9092 #集群的情况直接用“,”分割
+  kafka:
+    bootstrap-servers: 127.0.0.1:9092 #集群的情况直接用“,”分割
+
+#  main:
+#    allow-bean-definition-overriding: true
+
+  person:
+    name: mengday
+    age: 28
 
 server:
   port: 8081
@@ -45,3 +52,5 @@ zuul:
   ribbon:
     okhttp:
       enabled=true
+
+

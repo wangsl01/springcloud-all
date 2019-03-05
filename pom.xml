@@ -11,6 +11,7 @@
         <module>cloudpay-web</module>
         <module>cloudpay-core</module>
         <module>cloudpay-db</module>
+        <module>cloudpay-spring-boot-starter</module>
     </modules>
     <packaging>pom</packaging>
     <name>cloudpay</name>
