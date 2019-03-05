@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=cloud.pay.configuration.PersonServiceAutoConfiguration
